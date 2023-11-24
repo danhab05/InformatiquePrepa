@@ -6,6 +6,7 @@ def multiplie(x, y):
     if x%2==0 and x > 0:
         return multiplie(x/2 * 2*y, 1)
     else:
-        return multiplie((x-1)/2 * 2*y, 1)
-
+        return multiplie((x-1)/2 * 2*y + y, 1)
+    
+print(multiplie(2, 5))
 

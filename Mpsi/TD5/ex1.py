@@ -9,8 +9,9 @@ def maxi_iter(l):
 def maxi_rec(l):
     if len(l)==1:
         return l[0]
-    
     mf = maxi_rec(l[1:])
+    print(l[:1])
+    print(mf)
     if l[0]>mf:   
         return (l[0])
    
@@ -25,5 +26,7 @@ def maxi_rec2(l, i=0):
         return (l[i])
     return mf
 
+l = [55,34,572,555,2,2, 222]
+print(maxi_rec(l))
 
-print(maxi_rec2([5555,34,572,555,2,2, 222], 4))
+print(l[1:][1:][1:][1:][1:][1:])
