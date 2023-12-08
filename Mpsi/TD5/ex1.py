@@ -10,8 +10,6 @@ def maxi_rec(l):
     if len(l)==1:
         return l[0]
     mf = maxi_rec(l[1:])
-    print(l[:1])
-    print(mf)
     if l[0]>mf:   
         return (l[0])
    
@@ -29,4 +27,3 @@ def maxi_rec2(l, i=0):
 l = [55,34,572,555,2,2, 222]
 print(maxi_rec(l))
 
-print(l[1:][1:][1:][1:][1:][1:])
