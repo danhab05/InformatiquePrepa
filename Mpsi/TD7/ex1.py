@@ -9,13 +9,13 @@ def q1Paris():
     imPath = "paris.jpg"
     paris = plt.imread(imPath)
     paris = paris.astype(int)
-    parisBlue = paris.copy()
+    parisBlue = paris.copy() 
     for i in range(50, 400):
-        for j in range(250, 450):
+        for j in range(250, 350):
             parisBlue[i][j] = np.array([0,0, 255])
     plt.imshow(parisBlue)
     plt.show()
-
+q1Paris()
 def q1Tigre():
     # pour tigre
     imPath = "tigre.bmp"
@@ -38,21 +38,21 @@ def inverse(im):
 
 
 def saturer(im, seuil):
-    imCp = im.copy()
-    for i in range(len(imCp)):
-        for j in range(len(imCp[1])):
-            r, v, b = im[i][j]
+    imCp = im.copy() # copie de l'image
+    for i in range(len(imCp)): # parcourt ligne colonne 
+        for j in range(len(imCp[1])): # parcourt les couleurs
+            r, v, b = im[i][j] # je leur donne chaque fois leur valeurs
             r = 255 if r > seuil else 0
             v = 255 if v > seuil else 0
             b = 255 if b > seuil else 0
             imCp[i][j] = np.array([r, v, b])
     return imCp
 
-imPath = "paris.jpg"
-paris = plt.imread(imPath)
-paris = paris.astype(int)
-parisReverse= saturer(paris, 127)
-affiche(parisReverse)
+# imPath = "tigre.bmp"
+# paris = plt.imread(imPath)
+# paris = paris.astype(int)
+# parisReverse= saturer(paris, 127)
+# affiche(parisReverse)
 
 def f(x):
     y = x + 0.4*(x-127)
