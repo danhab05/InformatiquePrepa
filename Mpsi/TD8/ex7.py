@@ -9,4 +9,4 @@ def insertion(L, x, n):
 
         
 def triinsertion(L, n):
-    
+    pass
