@@ -15,4 +15,17 @@ def valPlusFreq(L):
             
         
     return vf, cmax
-print(valPlusFreq([1,2,2,2,5,6]))
+# print(valPlusFreq([1,2,2,2,5,6]))
+
+
+
+
+
+def fact(n):
+    if n == 1:
+        return 1
+    return n*fact(n-1)
+
+print(fact(3))
+
+
